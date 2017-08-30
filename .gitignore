@@ -1,1 +1,8 @@
 *.pyc
+.DS_STORE
+/data
+/output
+/save
+/inter_single
+/glove.6B.100d.txt
+.ropeproject
