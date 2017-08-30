@@ -1,0 +1,13 @@
+image: dummyai/py3-tf-cpu
+resources:
+  memory: 1Gi
+  cpu: "1"
+input_space:
+  paragraph: String
+  question: String
+output_space:
+  answer: String
+cmd:
+- pip install flask nltk tqdm jinja2
+- python -c "import nltk; nltk.download('punkt')"
+- python serve_model.py
