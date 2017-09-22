@@ -1,13 +1,17 @@
+name: bi-att-flow
+tag: latest
 image: dummyai/py3-tf-cpu
 resources:
   memory: 1Gi
   cpu: "1"
 input_space:
-  paragraph: String
-  question: String
+  paragraph: str
+  question: str
 output_space:
-  answer: String
-cmd:
+  answer: str
+setup:
 - pip install flask nltk tqdm jinja2
 - python -c "import nltk; nltk.download('punkt')"
-- python serve_model.py
+main:
+  type: http
+  cmd: python serve_model.py
