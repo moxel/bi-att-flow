@@ -1,0 +1,17 @@
+name: bi-att-flow
+tag: latest
+image: moxel/py3-tf-0.11.cpu
+resources:
+  memory: 1Gi
+  cpu: "1"
+input_space:
+  paragraph: str
+  question: str
+output_space:
+  answer: str
+setup:
+- pip install flask nltk tqdm jinja2
+- python -c "import nltk; nltk.download('punkt')"
+main:
+  type: http
+  entrypoint: python serve_model.py
