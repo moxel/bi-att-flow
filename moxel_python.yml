@@ -1,6 +1,6 @@
 name: bi-att-flow
 tag: latest
-image: moxel/py3-tf-0.11.cpu
+image: py3-tf-0.11.cpu
 resources:
   memory: 1Gi
   cpu: "1"
